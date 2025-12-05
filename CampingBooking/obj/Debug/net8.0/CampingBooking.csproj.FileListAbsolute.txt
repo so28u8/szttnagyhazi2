@@ -1,0 +1,14 @@
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.AssemblyInfoInputs.cache
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.AssemblyInfo.cs
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.csproj.CoreCompileInputs.cache
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\bin\Debug\net8.0\CampingBooking.exe
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\bin\Debug\net8.0\CampingBooking.deps.json
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\bin\Debug\net8.0\CampingBooking.runtimeconfig.json
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\bin\Debug\net8.0\CampingBooking.dll
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\bin\Debug\net8.0\CampingBooking.pdb
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.dll
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\refint\CampingBooking.dll
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.pdb
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\CampingBooking.genruntimeconfig.cache
+D:\Sulis cuccok\EVIP\CampingBooking\CampingBooking\obj\Debug\net8.0\ref\CampingBooking.dll

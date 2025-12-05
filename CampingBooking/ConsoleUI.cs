@@ -87,8 +87,9 @@ namespace CampingBooking
                 Console.WriteLine("A hely nem elérhető ebben az idősávban!");
                 return;
             }
-
-            int price = priceCalculator.CalculateTotalPrice(place, from, to);
+            Console.WriteLine("Vendégszám");
+            int guesCount = int.Parse(Console.ReadLine());
+            int price = priceCalculator.CalculateTotalPrice(place, from, to, guesCount);
 
             Booking booking = new Booking(user, place, from, to, price);
             bookingManager.AddBooking(booking);
@@ -143,7 +144,10 @@ namespace CampingBooking
 
             Console.Write("Új vég dátum (yyyy-mm-dd): ");
             DateTime newTo = DateTime.Parse(Console.ReadLine());
-
+            
+            Console.Write("Vendégszám (módosítás után): ");
+            int guestCount = int.Parse(Console.ReadLine());
+            
             // Foglaltság ellenőrzés
             if (!availabilityChecker.IsAvailable(booking.Place, newFrom, newTo, bookingManager))
             {
@@ -151,7 +155,7 @@ namespace CampingBooking
                 return;
             }
 
-            int newPrice = priceCalculator.CalculateTotalPrice(booking.Place, newFrom, newTo);
+            int newPrice = priceCalculator.CalculateTotalPrice(booking.Place, newFrom, newTo, guestCount );
 
             bookingManager.UpdateBooking(id, newFrom, newTo, newPrice);
 

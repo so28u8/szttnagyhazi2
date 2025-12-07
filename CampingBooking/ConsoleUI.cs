@@ -24,8 +24,9 @@ namespace CampingBooking
                     "\n--- ADMIN FUNKCIÓK ---\n" +
                     "6) Hely hozzáadása\n" +
                     "7) Hely módosítása\n" +
-                    "8) Hely törlése\n\n" +
-                    "9) Kilépés\n" +
+                    "8) Hely törlése\n" +
+                    "9) Ár tarifájának módosítása\n"+
+                    "\n10) Kilépés\n" +
                     "Válassz: ");
 
                 string input = Console.ReadLine();
@@ -41,7 +42,8 @@ namespace CampingBooking
                     case "6": AdminAddPlace(); break;
                     case "7": AdminModifyPlace(); break;
                     case "8": AdminDeletePlace(); break;
-                    case "9": return;
+                    case "9": ModifyPrice(); break;
+                    case "10": return;
                     default:
                         Console.WriteLine("Hiba, próbáld újra!\n\n");
                         break;
@@ -286,5 +288,30 @@ namespace CampingBooking
             else
                 Console.WriteLine("Hely törölve.\n\n");
         }
+
+        private void ModifyPrice()
+        {
+            Console.WriteLine("\n--- Tarifamódosítás ---\n");
+
+            ListPlaces();
+            int placeId = GetValidInt("Hely ID: ");
+
+            var place = placeManager.GetPlaceById(placeId);
+            if (place == null)
+            {
+                Console.WriteLine("Nincs ilyen hely!");
+                return;
+            }
+
+            Console.WriteLine($"Jelenlegi ár: {place.PricePerNight} Ft/éj");
+
+            int newPrice = GetValidInt("Új ár (Ft/éj): ", 1);
+
+            if (placeManager.UpdatePrice(placeId, newPrice))
+                Console.WriteLine("Ár sikeresen módosítva.\n\n");
+            else
+                Console.WriteLine("Hiba az ár módosításakor.\n\n");
+        }
+
     }
 }

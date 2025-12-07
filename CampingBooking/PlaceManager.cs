@@ -51,5 +51,14 @@ namespace CampingBooking
             Places.Remove(p);
             return true;
         }
+
+        public bool UpdatePrice(int placeId, int newPrice)
+        {
+            var place = GetPlaceById(placeId);
+            if (place == null) return false;
+
+            place.PricePerNight = newPrice;
+            return true;
+        }
     }
 }
